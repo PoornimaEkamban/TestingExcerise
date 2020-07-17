@@ -1,0 +1,19 @@
+Function Used for Testing : pm.test("Dog Availbility", function () {});
+
+ To check entire string is equal: pm.expect(jsonData.Promotions[1].Description).to.eql("Good position in category \n2x larger image in desktop site search results");
+ To check the string includes in search string: pm.expect(jsonData.Promotions[1].Description).includes("2x larger image"); 
+
+Variables:
+1)Temporary variable:
+                      var tempidpet= jsonData[0].id;
+                      console.log(tempidpet);
+2)Data variable:can pass file to the request in collections. format text,csv and json
+3)Environment varaible:
+                      var jsonData=pm.response.json();
+                      console.log(jsonData);
+
+                      var tempidpet= jsonData[0].id;
+                      console.log(tempidpet);
+                      pm.environment.set("IDValuePost",tempidpet);
+4)Collection variable:  pm.collectionVariables.get("variable");
+5)Global variable: pm.globals.get("variable");
